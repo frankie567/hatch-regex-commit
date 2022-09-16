@@ -29,9 +29,9 @@ dependencies = [
 dynamic = ["version"]
 
 [project.urls]
-Documentation = "https://github.com/unknown/hatch-regex-commit#readme"
-Issues = "https://github.com/unknown/hatch-regex-commit/issues"
-Source = "https://github.com/unknown/hatch-regex-commit"
+Documentation = "https://github.com/frankie567/hatch-regex-commit#readme"
+Issues = "https://github.com/frankie567/hatch-regex-commit/issues"
+Source = "https://github.com/frankie567/hatch-regex-commit"
 
 [project.entry-points.hatch]
 regex-commit = "hatch_regex_commit.hooks"
