@@ -1,4 +1,5 @@
 from typing import List, Type
+
 from hatchling.version.source.regex import RegexSource
 
 from hatch_regex_commit.exceptions import GitNotAvailableException
@@ -24,7 +25,9 @@ class RegexCommitSource(RegexSource):
 
     @property
     def config_commit_message(self) -> str:
-        return self._get_str_config("commit_message", "Bump version {current_version} → {new_version}")
+        return self._get_str_config(
+            "commit_message", "Bump version {current_version} → {new_version}"
+        )
 
     @property
     def config_commit_extra_args(self) -> List[str]:
@@ -47,7 +50,9 @@ class RegexCommitSource(RegexSource):
 
     @property
     def config_tag_message(self) -> str:
-        return self._get_str_config("tag_message", "Bump version {current_version} → {new_version}")
+        return self._get_str_config(
+            "tag_message", "Bump version {current_version} → {new_version}"
+        )
 
     @property
     def config_tag_sign(self) -> bool:
@@ -62,7 +67,7 @@ class RegexCommitSource(RegexSource):
         context = {"current_version": version_data["version"], "new_version": version}
 
         if self.config_commit:
-            file = self.config.get('path', '')
+            file = self.config.get("path", "")
             self.git.add_path(file)
             commit_message = self.config_commit_message.format(**context)
             self.git.commit(commit_message, self.config_commit_extra_args)

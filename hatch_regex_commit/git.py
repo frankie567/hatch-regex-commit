@@ -31,7 +31,6 @@ class Git:
                 return False
             raise
 
-
     @classmethod
     def assert_nondirty(cls):
         lines = [
@@ -55,9 +54,7 @@ class Git:
         with NamedTemporaryFile("wb", delete=False) as f:
             f.write(message.encode("utf-8"))
         try:
-            subprocess.check_output(
-                cls._COMMIT_COMMAND + [f.name] + extra_args
-            )
+            subprocess.check_output(cls._COMMIT_COMMAND + [f.name] + extra_args)
         except subprocess.CalledProcessError as exc:
             err_msg = "Failed to run {}: return code {}, output: {}".format(
                 exc.cmd, exc.returncode, exc.output
