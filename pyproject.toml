@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "hatch-regex-commit"
-description = ''
+description = "Hatch plugin to create a commit and tag when bumping version"
 readme = "README.md"
 requires-python = ">=3.7"
 license = "MIT"
