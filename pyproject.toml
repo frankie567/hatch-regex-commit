@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-regex-commit"]
 build-backend = "hatchling.build"
 
 [project]
@@ -38,6 +38,8 @@ Source = "https://github.com/frankie567/hatch-regex-commit"
 regex-commit = "hatch_regex_commit.hooks"
 
 [tool.hatch.version]
+source = "regex_commit"
+commit_extra_args = ["-e"]
 path = "hatch_regex_commit/__about__.py"
 
 [tool.hatch.envs.default]
