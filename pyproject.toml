@@ -57,6 +57,11 @@ lint = [
   "black .",
   "mypy hatch_regex_commit/",
 ]
+lint-check = [
+  "isort --check-only ./hatch_regex_commit ./tests",
+  "black --check .",
+  "mypy hatch_regex_commit/",
+]
 
 [[tool.hatch.envs.test.matrix]]
 python = ["37", "38", "39", "310", "311"]
