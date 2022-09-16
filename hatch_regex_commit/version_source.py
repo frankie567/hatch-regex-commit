@@ -41,10 +41,6 @@ class RegexCommitSource(RegexSource):
         return self._get_bool_config("tag", True)
 
     @property
-    def config_tag(self) -> bool:
-        return self._get_bool_config("tag", True)
-
-    @property
     def config_tag_name(self) -> str:
         return self._get_str_config("tag_name", "v{new_version}")
 

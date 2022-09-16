@@ -39,8 +39,8 @@ regex-commit = "hatch_regex_commit.hooks"
 
 [tool.hatch.version]
 source = "regex_commit"
-commit_extra_args = ["-e"]
 path = "hatch_regex_commit/__about__.py"
+commit_extra_args = ["-e"]
 
 [tool.hatch.envs.default]
 dependencies = [
