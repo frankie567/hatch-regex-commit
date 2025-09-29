@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling", "hatch-regex-commit"]
+requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
@@ -38,7 +38,7 @@ Source = "https://github.com/frankie567/hatch-regex-commit"
 regex-commit = "hatch_regex_commit.hooks"
 
 [tool.hatch.version]
-source = "regex_commit"
+source = "regex"
 path = "hatch_regex_commit/__about__.py"
 commit_extra_args = ["-e"]
 
@@ -67,7 +67,7 @@ lint-check = [
 ]
 
 [[tool.hatch.envs.test.matrix]]
-python = ["37", "38", "39", "310", "311"]
+python = ["39", "310", "311", "312", "313"]
 
 [tool.coverage.run]
 branch = true
